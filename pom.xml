@@ -27,7 +27,7 @@
 	<scm>
 		<developerConnection>scm:git:git@github.com:chenchongli/storage-prototype.git</developerConnection>
 		<connection>scm:git:git@github.com:chenchongli/storage-prototype.git</connection>
-		<url>git@github.com:chenchongli/storage-prototype.git</url>
+		<url>https://github.com/chenchongli/storage-prototype.git</url>
 	</scm>
 
 	<developers>
