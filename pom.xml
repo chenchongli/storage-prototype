@@ -1,4 +1,5 @@
-<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.chenchongli</groupId>
 	<artifactId>storage-prototype</artifactId>
@@ -28,8 +29,8 @@
 		<developerConnection>scm:git:git@github.com/chenchongli/storage-prototype.git</developerConnection>
 		<connection>scm:git:git@github.com/chenchongli/storage-prototype.git</connection>
 		<url>https://github.com/chenchongli/storage-prototype</url>
-    <tag>HEAD</tag>
-  </scm>
+		<tag>HEAD</tag>
+	</scm>
 
 	<developers>
 		<developer>
@@ -65,15 +66,30 @@
 					</execution>
 				</executions>
 			</plugin>
+
 			<plugin>
-				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-release-plugin</artifactId>
-				<version>2.4.1</version>
+				<version>2.4.2</version>
 				<configuration>
-					<arguments>-Dgpg.passphrase="helloworld"</arguments>
-					<!-- see http://jira.codehaus.org/browse/MGPG-9 -->
-					<mavenExecutorId>forked-path</mavenExecutorId>
+					<useReleaseProfile>false</useReleaseProfile>
+					<arguments>-P
+						release,sonatype-oss-release,full,no-osgi,linux-native</arguments>
+					<autoVersionSubmodules>true</autoVersionSubmodules>
+					<allowTimestampedSnapshots>false</allowTimestampedSnapshots>
+					<tagNameFormat>storage-prototype-@{project.version}</tagNameFormat>
 				</configuration>
+				<dependencies>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-api</artifactId>
+						<version>1.8.1</version>
+					</dependency>
+					<dependency>
+						<groupId>org.apache.maven.scm</groupId>
+						<artifactId>maven-scm-provider-gitexe</artifactId>
+						<version>1.8.1</version>
+					</dependency>
+				</dependencies>
 			</plugin>
 		</plugins>
 	</build>
