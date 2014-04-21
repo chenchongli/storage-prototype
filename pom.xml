@@ -25,7 +25,7 @@
 	</licenses>
 
 	<scm>
-		<developerConnection>scm:git:git//github.com/chenchongli/storage-prototype.git</developerConnection>
+		<developerConnection>scm:git:git@github.com/chenchongli/storage-prototype.git</developerConnection>
 		<connection>scm:git:git@github.com/chenchongli/storage-prototype.git</connection>
 		<url>https://github.com/chenchongli/storage-prototype</url>
 	</scm>
