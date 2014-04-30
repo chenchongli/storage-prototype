@@ -2,7 +2,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.github.chenchongli</groupId>
 	<artifactId>storage-prototype</artifactId>
-	<version>1.0-SNAPSHOT</version>
+	<version>1.0</version>
 	<packaging>jar</packaging>
 
 	<parent>
@@ -28,6 +28,7 @@
 		<developerConnection>scm:git:git@github.com:chenchongli/storage-prototype.git</developerConnection>
 		<connection>scm:git:git@github.com:chenchongli/storage-prototype.git</connection>
 		<url>https://github.com/chenchongli/storage-prototype</url>
+    <tag>storage-prototype-1.0</tag>
   </scm>
 
 	<developers>
